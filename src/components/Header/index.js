@@ -1,30 +1,39 @@
 import React from 'react';
+import STRINGS from '../../localization';
 
 export const Header = () => 
   <header id="home">
 
     <nav id="nav-wrap">
 
-      <a className="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
-      <a className="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
+      <a className="mobile-btn" href="#nav-wrap" title="Show navigation">{STRINGS.MOBILE_SHOW_NAVIGATION}</a>
+      <a className="mobile-btn" href="#" title="Hide navigation">{STRINGS.MOBILE_HIDE_NAVIGATION}</a>
 
       <ul id="nav" className="nav">
-        <li className="current"><a className="smoothscroll" href="#home">Home</a></li>
-        <li><a className="smoothscroll" href="#about">About</a></li>
-        <li><a className="smoothscroll" href="#resume">Resume</a></li>
-        <li><a className="smoothscroll" href="#portfolio">Works</a></li>
-        <li><a className="smoothscroll" href="#testimonials">Testimonials</a></li>
-        <li><a className="smoothscroll" href="#contact">Contact</a></li>
+        <li className="current"><a className="smoothscroll" href="#home">{STRINGS.MENU_HOME}</a></li>
+        <li><a className="smoothscroll" href="#about">{STRINGS.MENU_ABOUT}</a></li>
+        <li><a className="smoothscroll" href="#resume">{STRINGS.MENU_RESUME}</a></li>
+        <li><a className="smoothscroll" href="#portfolio">{STRINGS.MENU_WORKS}</a></li>
+        <li><a className="smoothscroll" href="#testimonials">{STRINGS.MENU_TESTIMONIALS}</a></li>
+        <li><a className="smoothscroll" href="#contact">{STRINGS.MENU_CONTACT}</a></li>
       </ul>
 
     </nav>
 
     <div className="row banner">
       <div className="banner-text">
-        <h1 className="responsive-headline">I'm Boyyoka-san.</h1>
-        <h3>I'm a Manila based <span>graphic designer</span>, <span>illustrator</span> and <span>webdesigner</span> creating awesome and
-          effective visual identities for companies of all sizes around the globe. Let's <a className="smoothscroll" href="#about">start scrolling</a>
-          and learn more <a className="smoothscroll" href="#about">about me</a>.</h3>
+        <h1 className="responsive-headline">
+        
+        {/* I'm Boyyoka-san. */}
+        {STRINGS.GENERAL_INTRODUCTION}
+        
+        </h1>
+
+        <h3>
+          {`${STRINGS.DETAILED_INTROCUCTION_1}
+          ${STRINGS.HEY_YOU_WHAT_IS_YOUR_PROFFESION_QUESTIONMARK} ${STRINGS.DETAILED_INTROCUCTION_2}`} <span>{STRINGS.THE_NETHERLANDS}</span> {STRINGS.DETAILED_INTROCUCTION_8} <span>{STRINGS.KOREA}</span>. 
+          {STRINGS.DETAILED_INTROCUCTION_4} <a className="smoothscroll" href="#about">{STRINGS.DETAILED_INTROCUCTION_5}</a> {STRINGS.DETAILED_INTROCUCTION_6} <a className="smoothscroll" href="#about">{STRINGS.DETAILED_INTROCUCTION_7}</a>.
+        </h3>
         <hr />
         <ul className="social">
           <li><a href="#"><i className="fa fa-facebook"></i></a></li>
