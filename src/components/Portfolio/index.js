@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { repos } from '../../services/api'
+import { Item } from "./Item";
 
 class Portfolio extends Component {
 
@@ -12,7 +13,7 @@ class Portfolio extends Component {
 		this.setState({loading: true})
 		repos.then(res => {
 			const { data: { data: { search: { edges }}}} = res
-			
+
 			this.setState({ 
 				repositories: edges,
 				loading: false
@@ -35,120 +36,24 @@ class Portfolio extends Component {
 						<h1>Check Out Some of My Works.</h1>
 						{/* portfolio-wrapper */}
 						<div id="portfolio-wrapper" className="bgrid-quarters s-bgrid-thirds cf">
-							<div className="columns portfolio-item">
-								<div className="item-wrap">
-									<a href="#modal-01" title>
-										<img alt src="assets/images/portfolio/coffee.jpg" />
-										<div className="overlay">
-											<div className="portfolio-item-meta">
-												<h5>Coffee</h5>
-												<p>Illustrration</p>
-											</div>
-										</div>
-										<div className="link-icon"><i className="icon-plus" /></div>
-									</a>
-								</div>
-							</div> {/* item end */}
-							<div className="columns portfolio-item">
-								<div className="item-wrap">
-									<a href="#modal-02" title>
-										<img alt src="assets/images/portfolio/console.jpg" />
-										<div className="overlay">
-											<div className="portfolio-item-meta">
-												<h5>Console</h5>
-												<p>Web Development</p>
-											</div>
-										</div>
-										<div className="link-icon"><i className="icon-plus" /></div>
-									</a>
-								</div>
-							</div> {/* item end */}
-							<div className="columns portfolio-item">
-								<div className="item-wrap">
-									<a href="#modal-03" title>
-										<img alt src="assets/images/portfolio/judah.jpg" />
-										<div className="overlay">
-											<div className="portfolio-item-meta">
-												<h5>Judah</h5>
-												<p>Webdesign</p>
-											</div>
-										</div>
-										<div className="link-icon"><i className="icon-plus" /></div>
-									</a>
-								</div>
-							</div> {/* item end */}
-							<div className="columns portfolio-item">
-								<div className="item-wrap">
-									<a href="#modal-04" title>
-										<img alt src="assets/images/portfolio/into-the-light.jpg" />
-										<div className="overlay">
-											<div className="portfolio-item-meta">
-												<h5>Into The Light</h5>
-												<p>Photography</p>
-											</div>
-										</div>
-										<div className="link-icon"><i className="icon-plus" /></div>
-									</a>
-								</div>
-							</div> {/* item end */}
-							<div className="columns portfolio-item">
-								<div className="item-wrap">
-									<a href="#modal-05" title>
-										<img alt src="assets/images/portfolio/farmerboy.jpg" />
-										<div className="overlay">
-											<div className="portfolio-item-meta">
-												<h5>Farmer Boy</h5>
-												<p>Branding</p>
-											</div>
-										</div>
-										<div className="link-icon"><i className="icon-plus" /></div>
-									</a>
-								</div>
-							</div> {/* item end */}
-							<div className="columns portfolio-item">
-								<div className="item-wrap">
-									<a href="#modal-06" title>
-										<img alt src="assets/images/portfolio/girl.jpg" />
-										<div className="overlay">
-											<div className="portfolio-item-meta">
-												<h5>Girl</h5>
-												<p>Photography</p>
-											</div>
-										</div>
-										<div className="link-icon"><i className="icon-plus" /></div>
-									</a>
-								</div>
-							</div> {/* item end */}
-							<div className="columns portfolio-item">
-								<div className="item-wrap">
-									<a href="#modal-07" title>
-										<img alt src="assets/images/portfolio/origami.jpg" />
-										<div className="overlay">
-											<div className="portfolio-item-meta">
-												<h5>Origami</h5>
-												<p>Illustrration</p>
-											</div>
-										</div>
-										<div className="link-icon"><i className="icon-plus" /></div>
-									</a>
-								</div>
-							</div> {/* item end */}
-							<div className="columns portfolio-item">
-								<div className="item-wrap">
-									<a href="#modal-08" title>
-										<img alt src="assets/images/portfolio/retrocam.jpg" />
-										<div className="overlay">
-											<div className="portfolio-item-meta">
-												<h5>Retrocam</h5>
-												<p>Web Development</p>
-											</div>
-										</div>
-										<div className="link-icon"><i className="icon-plus" /></div>
-									</a>
-								</div>
-							</div>  {/* item end */}
+						{
+							repositories.forEach( ({node: {name, description, url}}) => (
+								<Item
+									name={name}
+									description={description}
+									image={null}
+									url={url}
+								/>
+							))
+						}
+				
+							
+						
+						
+				
 						</div> {/* portfolio-wrapper end */}
 					</div> {/* twelve columns end */}
+
 					{/* Modal Popup
 							--------------------------------------------------------------- */}
 					<div id="modal-01" className="popup-modal mfp-hide">
