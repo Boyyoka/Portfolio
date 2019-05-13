@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { repos } from '../../services/api'
 import { Item } from "./Item";
+import { Loader } from '../Loader'
 
 class Portfolio extends Component {
 
@@ -34,24 +35,29 @@ class Portfolio extends Component {
 				<div className="row">
 					<div className="twelve columns collapsed">
 						<h1>Check Out Some of My Works.</h1>
-						{/* portfolio-wrapper */}
-						<div id="portfolio-wrapper" className="bgrid-quarters s-bgrid-thirds cf">
-						{
-							repositories.forEach( ({node: {name, description, url}}) => (
-								<Item
-									name={name}
-									description={description}
-									image={null}
-									url={url}
-								/>
-							))
-						}
+            {/* portfolio-wrapper */}
+            { loading ? 
+                <Loader />
+            :
+              <div id="portfolio-wrapper" className="bgrid-quarters s-bgrid-thirds cf">
+              {
+                repositories.filter( ({node: { name }}) => (name.toLowerCase() !== 'test' && 
+                                                              name.toLowerCase() !== 'portfolio' &&
+                                                                name.toLowerCase() !== 'racecondition-and-threading'
+                                                              ))
+                .map( ({ node: { name, description, url } }) => 
+                  <Item
+                    name={name}
+                    description={description}
+                    image={null}
+                    url={url}
+                  />
+                )
+              }
+            
 				
-							
-						
-						
-				
-						</div> {/* portfolio-wrapper end */}
+            </div>
+            }
 					</div> {/* twelve columns end */}
 
 					{/* Modal Popup
