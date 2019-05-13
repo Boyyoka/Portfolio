@@ -15,8 +15,14 @@ export default {
   PRESENT: `Present`,
   FULL_STACK_ENGINEER: `Fullstack software engineer`,
   INTERN: `Intern`,
-  PART_TIME_DEVELOPER: 'Part-time developer',    
-
+  PART_TIME_DEVELOPER: 'Part-time developer',   
+  
+  //Tools
+  PHOTOSHOP: `Photoshop`,
+  BLENDER: `Blender`,
+  GIT: `Git`,
+  DOCKER: `Docker`,
+  VISUAL_PARADIGM: `Visual Paradigm`,
 
   //Introduction
   MY_NAME: 'Shensly Hooplot',
@@ -68,7 +74,7 @@ export default {
   requirements gathering & specifications and project management.        
   `,
   ASSOCIATES_DESCRIPTION: `I completed this program at Nova College. The first year of this program consisted out of hardware, networking and software courses. This combination
-  gave me a good understanding of both hardware and software. The whole program was originally a three year program, but I graduated a year early.
+  gave me a good understanding of both hardware and software. The whole program was originally a three year program, but I graduated a year earlier.
   `,
 
   WORK: `Work`,
@@ -86,6 +92,9 @@ export default {
   `,
   BIT_HOLLA_DESCRIPTION_2: `which is a crypto market that makes trading your cryptocurrencies intiuitive and rapid.`,
   BLUE_SPHERE_DESCRIPTION:  `As a part-time developer I was working on a project that involved developing an Android application. My tasks mostly involved implementing new features and fixing issues that plagued the application at that time. `,
-  AUTODEALERS_DESCRIPTION:  `The position I held within this company was an intern. Most of my work involved building websites (front-end) with HTML, CSS and Javascript (JQuery). I also had to create my own application for the company which I did with HTML, CSS and C#.net`
+  AUTODEALERS_DESCRIPTION:  `The position I held within this company was an intern. Most of my work involved building websites (front-end) with HTML, CSS and Javascript (JQuery). I also had to create my own application for the company which I did with HTML, CSS and C#.net`,
+
+  SKILLS_AND_TOOLS: `Skills and Tools`,
+  SKILLS_AND_TOOLS_DESCRIPTION: `Besides programming, I also have experience working with some of the tools listed below. These skills and tools are a reprensation of my versatile skillset that I have been able to establish ever since I got into software engineering.`
   
 }
