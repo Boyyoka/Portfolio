@@ -10,9 +10,13 @@ export const repos = octokitRequest('POST /graphql', {
     edges {
       node {
         ... on Repository {
-          name,
-          url,
-          description,
+          name
+          url
+          primaryLanguage{
+            name
+          }
+          languages(first: 3) { nodes {name} }
+          description
            owner{
       			login
           }

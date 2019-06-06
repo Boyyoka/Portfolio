@@ -217,7 +217,7 @@ ul#nav li.current a { color: #F06000; }
    padding-top: 6px;
 }
 #about .main-col { padding-right: 5%; }
-#about .download .button {
+#about .download .button {.row
    margin-top: 6px;
    background: #444;
 }
@@ -511,12 +511,43 @@ ul#nav li.current a { color: #F06000; }
 	filter:alpha(opacity=100);
 }
 
+/* popup overlay */
+
+.Overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  opacity: 0;
+  -moz-opacity: 0;
+  filter:alpha(opacity=0);
+
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+ 
+  background: url(../images/overlay-bg.png) repeat;
+}
+
+.Overlay.show{
+  opacity: 1;
+  -moz-opacity: 1;
+  filter:alpha(opacity=1);
+}
+
 /* popup modal */
 .popup-modal {
 	max-width: 550px;
 	background: #fff;
-	position: relative;
-	margin: 0 auto;
+  position: fixed;
+  margin: 0 auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
 }
 .popup-modal .description-box { padding: 12px 36px 18px 36px; }
 .popup-modal .description-box h4 {

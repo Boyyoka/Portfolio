@@ -1,167 +1,101 @@
 import React, { Component } from 'react';
 import { repos } from '../../services/api'
-import { Item } from "./Item";
+import Item from "./Item";
 import { Loader } from '../Loader'
 
 class Portfolio extends Component {
 
-	state = {
-		repositories: [],
-		loading: false,
-	}
+  state = {
+    repositories: [],
+    loading: false,
+  }
 
-	componentDidMount() {
-		this.setState({loading: true})
-		repos.then(res => {
-			const { data: { data: { search: { edges }}}} = res
+  componentDidMount() {
+    this.setState({ loading: true })
+    repos.then(res => {
+      const { data: { data: { search: { edges } } } } = res
 
-			this.setState({ 
-				repositories: edges,
-				loading: false
-			})
-		})
-		.catch( err => {
-			 this.setState({
-				 loading: false
-			 })
-		})
-	}
+      this.setState({
+        repositories: edges,
+        loading: false
+      })
+    })
+      .catch(err => {
+        this.setState({
+          loading: false
+        })
+      })
+  }
 
-	render(){
-		const { repositories, loading } = this.state;
+  render() {
+    const { repositories, loading } = this.state;
 
-		return (
-			<section id="portfolio">
-				<div className="row">
-					<div className="twelve columns collapsed">
-						<h1>Check Out Some of My Works.</h1>
+    return (
+      <section id="portfolio">
+        <div className="row">
+          <div className="twelve columns collapsed">
+            <h1>Check Out Some of My Works.</h1>
             {/* portfolio-wrapper */}
-            { loading ? 
-                <Loader />
-            :
+            {loading ?
+              <Loader />
+              :
               <div id="portfolio-wrapper" className="bgrid-quarters s-bgrid-thirds cf">
-              {
-                repositories.filter( ({node: { name }}) => (name.toLowerCase() !== 'test' && 
-                                                              name.toLowerCase() !== 'portfolio' &&
-                                                                name.toLowerCase() !== 'racecondition-and-threading'
-                                                              ))
-                .map( ({ node: { name, description, url } }) => 
-                  <Item
-                    name={name}
-                    description={description}
-                    image={null}
-                    url={url}
-                  />
-                )
-              }
-            
-				
-            </div>
+                <Item
+                  name="Boyyoka"
+                  description="Wallpaper website with pretty much anything you could look for"
+                  languages={[{ name: 'C#' }, { name: '.NET' }, { name: 'JQuery' }, { name: 'HTML' }, { name: 'CSS' }]}
+                  image="assets/images/portfolio/boyyoka_logo.png"
+                  cover="assets/images/portfolio/modals/boyyoka_cover.png"
+                  url="http://boyyoka.azurewebsites.net"
+                  index={10}
+                />
+                <Item
+                  name="XrayTrade"
+                  description="Trading platform for smart contracts"
+                  languages={[{ name: 'Javscript' }, { name: 'ReactJS' }, { name: 'NodeJS' }]}
+                  image="assets/images/portfolio/xray_logo.png"
+                  cover="assets/images/portfolio/modals/xray_cover.png"
+                  url="https://xray.trade/"
+                  index={11}
+                />
+                <Item
+                  name="Plingo"
+                  description="Educational platform for learning languages"
+                  languages={[{ name: 'Javascript' }, { name: 'ReactJS' }, { name: 'NodeJS' }, { name: 'NextJS' }]}
+                  image="assets/images/portfolio/plingo_logo.png"
+                  cover="assets/images/portfolio/modals/plingo_cover.png"
+                  url="https://plingo.io/"
+                  index={12}
+                />
+                {
+                  repositories.filter(({ node: { name } }) => (name.toLowerCase() !== 'test' &&
+                    name.toLowerCase() !== 'portfolio' &&
+                    name.toLowerCase() !== 'racecondition-and-threading' &&
+                    name.toLowerCase() !== 'angularjs-single-page' &&
+                    name.toLowerCase() !== 'mayonaka'
+                  ))
+                    .map(({ node: { name, description, url, primaryLanguage, languages: { nodes } } }, index) =>
+                      <Item
+                        key={index}
+                        name={name}
+                        description={description}
+                        languages={nodes}
+                        image={name.toLowerCase().includes('api') ? `assets/images/portfolio/api_logo.png`
+                          : `assets/images/portfolio/${name.toLowerCase()}_logo.png`}
+                        cover={name.toLowerCase().includes('api') ? `assets/images/portfolio/modals/api_cover.png`
+                          : `assets/images/portfolio/modals/${name.toLowerCase()}_cover.png`}
+                        url={url}
+                        index={index}
+                      />
+                    )
+                }
+              </div>
             }
-					</div> {/* twelve columns end */}
-
-					{/* Modal Popup
-							--------------------------------------------------------------- */}
-					<div id="modal-01" className="popup-modal mfp-hide">
-						<img className="scale-with-grid" src="assets/images/portfolio/modals/m-coffee.jpg" alt />
-						<div className="description-box">
-							<h4>Coffee Cup</h4>
-							<p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-							<span className="categories"><i className="fa fa-tag" />Branding, Webdesign</span>
-						</div>
-						<div className="link-box">
-							<a href="http://www.behance.net">Details</a>
-							<a className="popup-modal-dismiss">Close</a>
-						</div>
-					</div>{/* modal-01 End */}
-					<div id="modal-02" className="popup-modal mfp-hide">
-						<img className="scale-with-grid" src="assets/images/portfolio/modals/m-console.jpg" alt />
-						<div className="description-box">
-							<h4>Console</h4>
-							<p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-							<span className="categories"><i className="fa fa-tag" />Branding, Web Development</span>
-						</div>
-						<div className="link-box">
-							<a href="http://www.behance.net">Details</a>
-							<a className="popup-modal-dismiss">Close</a>
-						</div>
-					</div>{/* modal-02 End */}
-					<div id="modal-03" className="popup-modal mfp-hide">
-						<img className="scale-with-grid" src="assets/images/portfolio/modals/m-judah.jpg" alt />
-						<div className="description-box">
-							<h4>Judah</h4>
-							<p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-							<span className="categories"><i className="fa fa-tag" />Branding</span>
-						</div>
-						<div className="link-box">
-							<a href="http://www.behance.net">Details</a>
-							<a className="popup-modal-dismiss">Close</a>
-						</div>
-					</div>{/* modal-03 End */}
-					<div id="modal-04" className="popup-modal mfp-hide">
-						<img className="scale-with-grid" src="assets/images/portfolio/modals/m-intothelight.jpg" alt />
-						<div className="description-box">
-							<h4>Into the Light</h4>
-							<p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-							<span className="categories"><i className="fa fa-tag" />Photography</span>
-						</div>
-						<div className="link-box">
-							<a href="http://www.behance.net">Details</a>
-							<a className="popup-modal-dismiss">Close</a>
-						</div>
-					</div>{/* modal-04 End */}
-					<div id="modal-05" className="popup-modal mfp-hide">
-						<img className="scale-with-grid" src="assets/images/portfolio/modals/m-farmerboy.jpg" alt />
-						<div className="description-box">
-							<h4>Farmer Boy</h4>
-							<p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-							<span className="categories"><i className="fa fa-tag" />Branding, Webdesign</span>
-						</div>
-						<div className="link-box">
-							<a href="http://www.behance.net">Details</a>
-							<a className="popup-modal-dismiss">Close</a>
-						</div>
-					</div>{/* modal-05 End */}
-					<div id="modal-06" className="popup-modal mfp-hide">
-						<img className="scale-with-grid" src="assets/images/portfolio/modals/m-girl.jpg" alt />
-						<div className="description-box">
-							<h4>Girl</h4>
-							<p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-							<span className="categories"><i className="fa fa-tag" />Photography</span>
-						</div>
-						<div className="link-box">
-							<a href="http://www.behance.net">Details</a>
-							<a className="popup-modal-dismiss">Close</a>
-						</div>
-					</div>{/* modal-06 End */}
-					<div id="modal-07" className="popup-modal mfp-hide">
-						<img className="scale-with-grid" src="assets/images/portfolio/modals/m-origami.jpg" alt />
-						<div className="description-box">
-							<h4>Origami</h4>
-							<p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-							<span className="categories"><i className="fa fa-tag" />Branding, Illustration</span>
-						</div>
-						<div className="link-box">
-							<a href="http://www.behance.net">Details</a>
-							<a className="popup-modal-dismiss">Close</a>
-						</div>
-					</div>{/* modal-07 End */}
-					<div id="modal-08" className="popup-modal mfp-hide">
-						<img className="scale-with-grid" src="assets/images/portfolio/modals/m-retrocam.jpg" alt />
-						<div className="description-box">
-							<h4>Retrocam</h4>
-							<p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-							<span className="categories"><i className="fa fa-tag" />Webdesign, Photography</span>
-						</div>
-						<div className="link-box">
-							<a href="http://www.behance.net">Details</a>
-							<a className="popup-modal-dismiss">Close</a>
-						</div>
-					</div>{/* modal-01 End */}
-				</div> {/* row End */}
-			</section> /* Portfolio Section End*/
-		)
-	}
+          </div> {/* twelve columns end */}
+        </div> {/* row End */}
+      </section> /* Portfolio Section End*/
+    )
+  }
 }
 
 export default Portfolio
