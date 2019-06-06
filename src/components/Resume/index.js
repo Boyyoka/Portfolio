@@ -1,33 +1,28 @@
 import React from 'react';
+import STRINGS from '../../localization';
 
 export const Resume = () =>
 <section id="resume">
   <div className="row education">
     <div className="three columns header-col">
-      <h1><span>Education</span></h1>
+      <h1><span>{STRINGS.EDUCATION}</span></h1>
     </div>
     <div className="nine columns main-col">
       <div className="row item">
         <div className="twelve columns">
-          <h3>University of Life</h3>
-          <p className="info">Master in Graphic Design <span>•</span> <em className="date">April 2007</em></p>
+          <h3>{STRINGS.THE_HAGUE_UNIVERSITY}</h3>
+          <p className="info">{STRINGS.BACHELOR_DEGREE}<span>•</span> <em className="date">{`${STRINGS.FEBRUARY} ${STRINGS.TWO_THOUSAND_EIGHTEEN}`}</em></p>
           <p>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
-            Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
-            ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
-            Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. Nullam dictum felis eu pede mollis pretium.
+            {STRINGS.BACHELOR_DESCRIPTION}
           </p>
         </div>
       </div> {/* item end */}
       <div className="row item">
         <div className="twelve columns">
-          <h3>School of Cool Designers</h3>
-          <p className="info">B.A. Degree in Graphic Design <span>•</span> <em className="date">March 2003</em></p>
+          <h3>{STRINGS.NOVA_COLLEGE}</h3>
+          <p className="info">{STRINGS.ASSOCIATES_DEGREE}<span>•</span> <em className="date">{`${STRINGS.SEPTEMBER} ${STRINGS.TWO_THOUSAND_THIRTEEN}`}</em></p>
           <p>
-            This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
-            Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem
-            nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan
-            ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat
+            {STRINGS.ASSOCIATES_DESCRIPTION}
           </p>
         </div>
       </div> {/* item end */}
@@ -37,30 +32,42 @@ export const Resume = () =>
 ----------------------------------------------- */}
   <div className="row work">
     <div className="three columns header-col">
-      <h1><span>Work</span></h1>
+      <h1><span>{STRINGS.WORK}</span></h1>
     </div>
     <div className="nine columns main-col">
       <div className="row item">
         <div className="twelve columns">
-          <h3>Awesome Design Studio</h3>
-          <p className="info">Senior UX Designer <span>•</span> <em className="date">March 2010 - Present</em></p>
+          <h3>{STRINGS.BLOCK_BUSKER}</h3>
+          <p className="info">{STRINGS.FULL_STACK_ENGINEER}<span>•</span> <em className="date">{`${STRINGS.DECEMBER} ${STRINGS.TWO_THOUSAND_EIGHTEEN} - ${STRINGS.PRESENT}`}</em></p>
           <p>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
-            Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
-            ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
-            Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. Nullam dictum felis eu pede mollis pretium.
+            {`${STRINGS.BLOCK_BUSKER_DESCRIPTION} ${STRINGS.BLOCK_BUSKER_DESCRIPTION_2}`}
           </p>
         </div>
       </div> {/* item end */}
       <div className="row item">
         <div className="twelve columns">
-          <h3>Super Cool Studio</h3>
-          <p className="info">UX Designer <span>•</span> <em className="date">March 2007 - February 2010</em></p>
+          <h3>{`${STRINGS.BIT_HOLLA}`}</h3>
+          <p className="info">{`${STRINGS.FULL_STACK_ENGINEER}`}<span>•</span><em className="date">{`${STRINGS.JUNE} ${STRINGS.TWO_THOHUSAND_SEVENTEEN} - ${STRINGS.AUGUST} ${STRINGS.TWO_THOUSAND_EIGHTEEN}`}</em></p>
           <p>
-            This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
-            Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem
-            nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan
-            ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat
+            {`${STRINGS.BIT_HOLLA_DESCRIPTION} ${STRINGS.BIT_HOLLA_DESCRIPTION_2}`}
+          </p>
+        </div>
+      </div> {/* item end */}
+      <div className="row item">
+        <div className="twelve columns">
+          <h3>{`${STRINGS.BLUE_SPHERE}`}</h3>
+          <p className="info">{`${STRINGS.PART_TIME_DEVELOPER}`}<span>•</span><em className="date">{`${STRINGS.FEBRUARY} ${STRINGS.TWO_THOHUSAND_SEVENTEEN} - ${STRINGS.MAY} ${STRINGS.TWO_THOHUSAND_SEVENTEEN}`}</em></p>
+          <p>
+            {`${STRINGS.BLUE_SPHERE_DESCRIPTION}`}
+          </p>
+        </div>
+      </div> {/* item end */}
+      <div className="row item">
+        <div className="twelve columns">
+          <h3>{`${STRINGS.AUTODEALERS}`}</h3>
+          <p className="info">{`${STRINGS.INTERN}`}<span>•</span><em className="date">{`${STRINGS.FEBRUARY} ${STRINGS.TWO_THOUSAND_THIRTEEN} - ${STRINGS.JULY} ${STRINGS.TWO_THOUSAND_THIRTEEN}`}</em></p>
+          <p>
+            {`${STRINGS.AUTODEALERS_DESCRIPTION}`}
           </p>
         </div>
       </div> {/* item end */}
@@ -70,22 +77,19 @@ export const Resume = () =>
 ----------------------------------------------- */}
   <div className="row skill">
     <div className="three columns header-col">
-      <h1><span>Skills</span></h1>
+      <h1><span>{STRINGS.SKILLS_AND_TOOLS}</span></h1>
     </div>
     <div className="nine columns main-col">
-      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
-        eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
-        voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
-        voluptatem sequi nesciunt.
+      <p>
+        {`${STRINGS.SKILLS_AND_TOOLS_DESCRIPTION}`}
       </p>
       <div className="bars">
         <ul className="skills">
-          <li><span className="bar-expand photoshop" /><em>Photoshop</em></li>
-          <li><span className="bar-expand illustrator" /><em>Illustrator</em></li>
-          <li><span className="bar-expand wordpress" /><em>Wordpress</em></li>
-          <li><span className="bar-expand css" /><em>CSS</em></li>
-          <li><span className="bar-expand html5" /><em>HTML5</em></li>
-          <li><span className="bar-expand jquery" /><em>jQuery</em></li>
+          <li><span className="bar-expand photoshop" /><em>{`${STRINGS.PHOTOSHOP}`}</em></li>
+          <li><span className="bar-expand illustrator" /><em>{`${STRINGS.BLENDER}`}</em></li>
+          <li><span className="bar-expand wordpress" /><em>{`${STRINGS.GIT}`}</em></li>
+          <li><span className="bar-expand css" /><em>{`${STRINGS.DOCKER}`}</em></li>
+          <li><span className="bar-expand html5" /><em>{`${STRINGS.VISUAL_PARADIGM}`}</em></li>
         </ul>
       </div>{/* end skill-bars */}
     </div> {/* main-col end */}
