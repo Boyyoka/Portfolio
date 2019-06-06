@@ -4,10 +4,10 @@ export default {
   SEPTEMBER: `September`,
   APRIL: `April`,
   MARCH: `March`,
-  MAY:  `May`,
-  JUNE: `June`, 
+  MAY: `May`,
+  JUNE: `June`,
   JULY: `July`,
-  AUGUST:  `August`,
+  AUGUST: `August`,
   DECEMBER: `December`,
   TWO_THOUSAND_EIGHTEEN: `2018`,
   TWO_THOUSAND_THIRTEEN: `2013`,
@@ -15,8 +15,8 @@ export default {
   PRESENT: `Present`,
   FULL_STACK_ENGINEER: `Fullstack software engineer`,
   INTERN: `Intern`,
-  PART_TIME_DEVELOPER: 'Part-time developer',   
-  
+  PART_TIME_DEVELOPER: 'Part-time developer',
+
   //Tools
   PHOTOSHOP: `Photoshop`,
   BLENDER: `Blender`,
@@ -91,10 +91,14 @@ export default {
   the API in the backend, implementing deposit and withdrawal functionality and implementing hotkeys and macros (keyboard shortcuts to execute custom macro functionality) for the platform called:
   `,
   BIT_HOLLA_DESCRIPTION_2: `which is a crypto market that makes trading your cryptocurrencies intiuitive and rapid.`,
-  BLUE_SPHERE_DESCRIPTION:  `As a part-time developer I was working on a project that involved developing an Android application. My tasks mostly involved implementing new features and fixing issues that plagued the application at that time. `,
-  AUTODEALERS_DESCRIPTION:  `The position I held within this company was an intern. Most of my work involved building websites (front-end) with HTML, CSS and Javascript (JQuery). I also had to create my own application for the company which I did with HTML, CSS and C#.net`,
+  BLUE_SPHERE_DESCRIPTION: `As a part-time developer I was working on a project that involved developing an Android application. My tasks mostly involved implementing new features and fixing issues that plagued the application at that time. `,
+  AUTODEALERS_DESCRIPTION: `The position I held within this company was an intern. Most of my work involved building websites (front-end) with HTML, CSS and Javascript (JQuery). I also had to create my own application for the company which I did with HTML, CSS and C#.net`,
 
   SKILLS_AND_TOOLS: `Skills and Tools`,
-  SKILLS_AND_TOOLS_DESCRIPTION: `Besides programming, I also have experience working with some of the tools listed below. These skills and tools are a reprensation of my versatile skillset that I have been able to establish ever since I got into software engineering.`
-  
+  SKILLS_AND_TOOLS_DESCRIPTION: `Besides programming, I also have experience working with some of the tools listed below. These skills and tools are a reprensation of my versatile skillset that I have been able to establish ever since I got into software engineering.`,
+  TESTIMONIALS_TITLE: `Testimonials`,
+  TESTIMONIALS: [{
+    name: 'Jose Miguel Navarro Iglesias',
+    testimonial: `Shensly is a good engineer with a lot of passion and desired to learn. Always doing his best and listening feedback to improve his skills. Also he has good ideas and trying to improve the product and his abilities. It was a pleasure to work with Shensly.`
+  }]
 }
