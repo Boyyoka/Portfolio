@@ -10,9 +10,9 @@ const Wrapper = styled.div`
   align-self: center;
   justify-self: center;
   margin: 0 auto;
-  height: 8rem;
-  width: 8rem;
-  background-size: 8rem;
+  height: 4rem;
+  width: 4rem;
+  background-size: 4rem;
   background-image: url('../../../assets/images/gif/loader.gif');
   background-repeat: no-repeat;
 `

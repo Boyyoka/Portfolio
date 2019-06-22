@@ -3,10 +3,10 @@ import config from '../../config'
 
 //GraphQL call to github api
 export const repos = octokitRequest('POST /graphql', {
-	headers: {
-    authorization: `token ${config.API_TOKEN}`
-	},
-  query: `{search (query: "is:public user:${config.GIT.USER}", type: REPOSITORY, first: 20) {
+  headers: {
+    authorization: `token ${config.GITHUB_TOKEN}`
+  },
+  query: `{search (query: "is:public user:${config.GITHUB_USER}", type: REPOSITORY, first: 20) {
     edges {
       node {
         ... on Repository {
@@ -26,4 +26,12 @@ export const repos = octokitRequest('POST /graphql', {
 	}
 }
 	`,
+})
+
+export const sendMail = (body) => fetch(`${config.API_HOST}:${config.API_PORT}/api/mail/send`, {
+  credentials: 'same-origin',
+  mode: 'no-cors',
+  method: 'POST',
+  body: JSON.stringify(body),
+  headers: { 'Content-Type': 'application/json' },
 })

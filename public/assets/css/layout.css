@@ -331,12 +331,12 @@ ul#nav li.current a { color: #F06000; }
   	-webkit-animation: photoshop 2s ease;
 }
 .illustrator {
-  	width: 55%;
+  	width: 75%;
   	-moz-animation: illustrator 2s ease;
   	-webkit-animation: illustrator 2s ease;
 }
 .wordpress {
-  	width: 50%;
+  	width: 90%;
   	-moz-animation: wordpress 2s ease;
   	-webkit-animation: wordpress 2s ease;
 }
@@ -346,12 +346,12 @@ ul#nav li.current a { color: #F06000; }
   	-webkit-animation: css 2s ease;
 }
 .html5 {
-  	width: 80%;
+  	width: 90%;
   	-moz-animation: html5 2s ease;
   	-webkit-animation: html5 2s ease;
 }
 .jquery {
-  	width: 50%;
+  	width: 90%;
   	-moz-animation: jquery 2s ease;
   	-webkit-animation: jquery 2s ease;
 }
@@ -362,11 +362,11 @@ ul#nav li.current a { color: #F06000; }
 }
 @-moz-keyframes illustrator {
   0%   { width: 0px;  }
-  100% { width: 55%;  }
+  100% { width: 75%;  }
 }
 @-moz-keyframes wordpress {
   0%   { width: 0px;  }
-  100% { width: 50%;  }
+  100% { width: 90%;  }
 }
 @-moz-keyframes css {
   0%   { width: 0px;  }
@@ -374,11 +374,11 @@ ul#nav li.current a { color: #F06000; }
 }
 @-moz-keyframes html5 {
   0%   { width: 0px;  }
-  100% { width: 80%;  }
+  100% { width: 90%;  }
 }
 @-moz-keyframes jquery {
   0%   { width: 0px;  }
-  100% { width: 50%;  }
+  100% { width: 90%;  }
 }
 
 @-webkit-keyframes photoshop {
@@ -387,11 +387,11 @@ ul#nav li.current a { color: #F06000; }
 }
 @-webkit-keyframes illustrator {
   0%   { width: 0px;  }
-  100% { width: 55%;  }
+  100% { width: 75%;  }
 }
 @-webkit-keyframes wordpress {
   0%   { width: 0px;  }
-  100% { width: 50%;  }
+  100% { width: 90%;  }
 }
 @-webkit-keyframes css {
   0%   { width: 0px;  }
@@ -399,11 +399,11 @@ ul#nav li.current a { color: #F06000; }
 }
 @-webkit-keyframes html5 {
   0%   { width: 0px;  }
-  100% { width: 80%;  }
+  100% { width: 90%;  }
 }
 @-webkit-keyframes jquery {
   0%   { width: 0px;  }
-  100% { width: 50%;  }
+  100% { width: 90%;  }
 }
 
 /* ------------------------------------------------------------------ */
@@ -889,7 +889,8 @@ call-to-action .button {
 	color: #fff;
 	background-color: #11ABB0;
 }
-#contact button.submit {
+#contact input.submit {
+  margin-bottom: 0;
 	text-transform: uppercase;
 	letter-spacing: 3px;
 	color:#fff;
@@ -901,7 +902,7 @@ call-to-action .button {
 	border-radius: 3px;
    margin-left: 26%;
 }
-#contact button.submit:hover {
+#contact input.submit:hover {
 	color: #0D0D0D;
 	background: #fff;
 }
@@ -1035,3 +1036,13 @@ footer .social-links li:first-child { margin-left: 0; }
 }
 #go-top a:hover { background-color: #0F9095; }
 
+.show {
+  display: block !important;
+}
+
+.errors {
+  position: absolute;
+  color: #D72828; 
+  top: 6.5rem;
+  left: 17rem;
+}

@@ -1,6 +1,6 @@
 export default {
-	API_TOKEN: "1f2378ef8ff857fec83f8e50ff2271cadd3c8402",
-	GIT: {
-		USER: 'Boyyoka'
-	}
+  API_HOST: process.env.REACT_APP_MAILER_API_HOST,
+  API_PORT: process.env.REACT_APP_MAILER_PORT,
+  GITHUB_TOKEN: process.env.REACT_APP_GITHUB_API_TOKEN,
+  GITHUB_USER: process.env.REACT_APP_GITHUB_USER
 }

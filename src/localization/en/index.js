@@ -96,9 +96,31 @@ export default {
 
   SKILLS_AND_TOOLS: `Skills and Tools`,
   SKILLS_AND_TOOLS_DESCRIPTION: `Besides programming, I also have experience working with some of the tools listed below. These skills and tools are a reprensation of my versatile skillset that I have been able to establish ever since I got into software engineering.`,
+  
+  //Testimonials
   TESTIMONIALS_TITLE: `Testimonials`,
   TESTIMONIALS: [{
     name: 'Jose Miguel Navarro Iglesias',
     testimonial: `Shensly is a good engineer with a lot of passion and desired to learn. Always doing his best and listening feedback to improve his skills. Also he has good ideas and trying to improve the product and his abilities. It was a pleasure to work with Shensly.`
-  }]
+  }],
+
+  //Contact
+  GET_IN_TOUCH: `Get in touch.`,
+  CONTACT_LEAD: `If you liked what you have seen or if you have any other interests, please do not hesitate to contact me below! I will try to get back to you as soon as possible.`,
+  CONTACT_NAME: `Name`,
+  CONTACT_EMAIL:  `Email`,
+  CONTACT_SUBJECT: `Subject`,
+  CONTACT_MESSAGE: `Message`,
+  CONTACT_SUBMIT: `Submit`,
+  CONTACT_MESSAGE_SUCCESS: `Your message was sent, thank you!`,
+  CONTSACT_MESSAGE_FAIL: `Your messsage could not be sent at this time, try again later`,
+  ADDRESS_AND_PHONE: `Address and Phone`,
+  CONTACT_PHONE: `Phone`,
+
+  //Validation Errors
+  ERRORS_REQUIRED: `This field is required`,
+  ERRORS_SUBJECT_MIN_LENGTH: `Subject should be at least 5 characters`,
+  ERRORS_MESSAGE_MIN_LENGTH: `Message should be at least 25 characters`,
+  ERRORS_INVALID_EMAIL: `Invalid email`,
+
 }
