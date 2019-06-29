@@ -144,7 +144,7 @@ export default class ContactForm extends Component {
           <div style={{ position: 'relative' }}>
             <label htmlFor="contactMessage">{STRINGS.CONTACT_MESSAGE} <span className="required">*</span></label>
             <textarea value={message} cols={50} rows={15} id="contactMessage" name="message" onChange={(e) => this.handleMessageChange(e.target.value)} />
-            <div style={{ top: '40rem' }} className="errors">{errors.message}</div>
+            <div className="errors">{errors.message}</div>
           </div>
           <div style={{ display: 'flex' }}>
             <input type="submit" className="submit" value={STRINGS.CONTACT_SUBMIT} />

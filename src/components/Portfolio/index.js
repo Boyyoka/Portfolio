@@ -72,7 +72,8 @@ class Portfolio extends Component {
                     name.toLowerCase() !== 'portfolio' &&
                     name.toLowerCase() !== 'racecondition-and-threading' &&
                     name.toLowerCase() !== 'angularjs-single-page' &&
-                    name.toLowerCase() !== 'mayonaka'
+                    name.toLowerCase() !== 'mayonaka' &&
+                    name.toLowerCase() !== 'mailer'
                   ))
                     .map(({ node: { name, description, url, primaryLanguage, languages: { nodes } } }, index) =>
                       <Item
