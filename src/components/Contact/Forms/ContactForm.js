@@ -48,28 +48,31 @@ export default class ContactForm extends Component {
   formIsValid = () => {
     const { name, from, subject, message } = this.state;
     let { errors } = this.state;
-    let valid = false
-
-    //custom length
-    errors.subject = subject.length < 5 ? STRINGS.ERRORS_SUBJECT_MIN_LENGTH : ''
-    errors.message = message.length < 25 ? STRINGS.ERRORS_MESSAGE_MIN_LENGTH : ''
+    let valid = true;
 
     //email validation
-    errors.from = validEmailRegex.test(from) ? '' : STRINGS.ERRORS_INVALID_EMAIL
+    errors.from = from.length > 0 
+    && !validEmailRegex.test(from) ? STRINGS.ERRORS_INVALID_EMAIL :
+    from.length === 0 ? STRINGS.ERRORS_REQUIRED : ''
 
     //required
     errors.name = name.length === 0 ? STRINGS.ERRORS_REQUIRED : ''
-    errors.from = from.length === 0 ? STRINGS.ERRORS_REQUIRED : ''
-    errors.subject = subject.length === 0 ? STRINGS.ERRORS_REQUIRED : ''
-    errors.message = message.length === 0 ? STRINGS.ERRORS_REQUIRED : ''
 
-    Object.values(errors).forEach(
-      (val) => val.length <= 0 && (valid = true)
-    );
+    //custom length
+    errors.subject = subject.length > 0 
+    && subject.length < 5 ? STRINGS.ERRORS_SUBJECT_MIN_LENGTH :
+    subject.length === 0 ? STRINGS.ERRORS_REQUIRED : ''
+
+    errors.message = message.length > 0 
+      && message.length < 25 ? STRINGS.ERRORS_MESSAGE_MIN_LENGTH :
+      message.length === 0 ?  STRINGS.ERRORS_REQUIRED : ''
+
+    Object.values(errors).some(
+      val => val.length > 0 && (valid = false ));
 
     this.setState({ errors })
-    return valid;
 
+    return valid
   }
 
   handleSubmit = (e) => {
