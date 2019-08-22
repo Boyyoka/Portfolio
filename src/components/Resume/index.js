@@ -38,7 +38,7 @@ export const Resume = () =>
       <div className="row item">
         <div className="twelve columns">
           <h3>{STRINGS.BLOCK_BUSKER}</h3>
-          <p className="info">{STRINGS.FULL_STACK_ENGINEER}<span>•</span> <em className="date">{`${STRINGS.DECEMBER} ${STRINGS.TWO_THOUSAND_EIGHTEEN} - ${STRINGS.PRESENT}`}</em></p>
+          <p className="info">{STRINGS.FULL_STACK_ENGINEER}<span>•</span> <em className="date">{`${STRINGS.DECEMBER} ${STRINGS.TWO_THOUSAND_EIGHTEEN} - ${STRINGS.AUGUST} ${STRINGS.TWO_THOUSAND_NINETEEN}`}</em></p>
           <p>
             {`${STRINGS.BLOCK_BUSKER_DESCRIPTION} ${STRINGS.BLOCK_BUSKER_DESCRIPTION_2}`}
           </p>

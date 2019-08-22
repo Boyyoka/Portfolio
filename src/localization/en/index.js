@@ -9,6 +9,7 @@ export default {
   JULY: `July`,
   AUGUST: `August`,
   DECEMBER: `December`,
+  TWO_THOUSAND_NINETEEN: `2019`,
   TWO_THOUSAND_EIGHTEEN: `2018`,
   TWO_THOUSAND_THIRTEEN: `2013`,
   TWO_THOHUSAND_SEVENTEEN: `2017`,
@@ -78,7 +79,7 @@ export default {
   `,
 
   WORK: `Work`,
-  BLOCK_BUSKER: `BlockBusker`,
+  BLOCK_BUSKER: `Three Labs`,
   BIT_HOLLA: `BitHolla`,
   BLUE_SPHERE: `BlueSphere`,
   AUTODEALERS: `Autodealers`,

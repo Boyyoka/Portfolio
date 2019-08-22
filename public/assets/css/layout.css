@@ -207,9 +207,9 @@ ul#nav li.current a { color: #F06000; }
 }
 #about .profile-pic {
    position: relative;
-   width: 150px;
+   width: 175px;
    height: 175px;
-   border-radius: 20%;
+   border-radius: 50%;
 }
 #about .contact-details { width: 41.66667%; }
 #about .download {
@@ -297,14 +297,14 @@ ul#nav li.current a { color: #F06000; }
 }
 .bars li {
    position: relative;
-  	margin-bottom: 60px;
-  	background: #ccc;
-  	height: 42px;
+  	margin-bottom: 40px;
+  	/* background: #ccc; */
+  	height: 15px;
   	border-radius: 3px;
 }
 .bars li em {
 	font: 15px 'opensans-bold', sans-serif;
-   color: #313131;
+   /* color: #313131; */
 	text-transform: uppercase;
    letter-spacing: 2px;
 	font-weight: normal;
@@ -318,7 +318,7 @@ ul#nav li.current a { color: #F06000; }
 
    margin: 0;
    padding-right: 24px;
-  	background: #313131;
+  	/* background: #313131; */
    display: inline-block;
   	height: 42px;
    line-height: 42px;
