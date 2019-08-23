@@ -124,4 +124,7 @@ export default {
   ERRORS_MESSAGE_MIN_LENGTH: `Message should be at least 25 characters`,
   ERRORS_INVALID_EMAIL: `Invalid email`,
 
+  //Misc
+  DOWNLOAD: 'Download Resume'
+
 }
