@@ -7,6 +7,7 @@ export const Footer = () =>
       <ul className="social-links">
         <li><a href="https://www.facebook.com/profile.php?id=100015186974262"><i className="fa fa-facebook" /></a></li>
         <li><a href="https://www.linkedin.com/in/shensly-hooplot-373797138/"><i className="fa fa-linkedin" /></a></li>
+        <li><a href="https://github.com/Boyyoka"><i className="fa fa-github" /></a></li>
         <li><a href="live:boykehooplot"><i className="fa fa-skype" /></a></li>
       </ul>
       <ul className="copyright">
