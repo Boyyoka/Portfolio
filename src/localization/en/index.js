@@ -56,7 +56,7 @@ export default {
 
   //About
   ABOUT_ME_TITLE: 'About me',
-  ABOUT_ME_CONTENT: `I have over 2 years of professional experience as a software engineer, and have worked for startups to medium-sized organizations.
+  ABOUT_ME_CONTENT: `I have 8 years of experience in software development, and have worked for startups to medium-sized organizations.
   While I am proficient as a full-stack engineer, my expertise is in building scalable backend services(API services, async mechanisms).
   I'm most familiar with C# and the .Net framework, but picking a new framework or language is no problemo.
   likewise, I love building things from scratch putting in a lot of thought before hand and making proper software designs to address future problems.`,
