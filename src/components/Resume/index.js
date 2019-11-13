@@ -83,15 +83,32 @@ export const Resume = () =>
       <p>
         {`${STRINGS.SKILLS_AND_TOOLS_DESCRIPTION}`}
       </p>
-      <div className="bars">
-        <ul className="skills">
-          <li><span className="bar-expand photoshop" /><em>{`${STRINGS.PHOTOSHOP}`}</em></li>
-          <li><span className="bar-expand illustrator" /><em>{`${STRINGS.BLENDER}`}</em></li>
-          <li><span className="bar-expand wordpress" /><em>{`${STRINGS.GIT}`}</em></li>
-          <li><span className="bar-expand css" /><em>{`${STRINGS.DOCKER}`}</em></li>
-          <li><span className="bar-expand html5" /><em>{`${STRINGS.VISUAL_PARADIGM}`}</em></li>
-        </ul>
-      </div>{/* end skill-bars */}
+      <div className="tools">
+        <div className="tool-wrapper">
+          <img src ="assets/images/tools/photoshop.png" />
+          <em>{`${STRINGS.PHOTOSHOP}`}</em>
+        </div>
+        <div className="tool-wrapper" style={{marginRight: '3em', marginLeft: '3em'}}>
+          <img src ="assets/images/tools/docker.png" />
+          <em>{`${STRINGS.DOCKER}`}</em>
+        </div>
+        <div className="tool-wrapper">
+          <img src ="assets/images/tools/git.png" />
+          <em>{`${STRINGS.GIT}`}</em>
+        </div>
+        <div className="tool-wrapper">
+          <img src ="assets/images/tools/azure.png" />
+          <em>{`${STRINGS.AZURE}`}</em>
+        </div>
+        <div className="tool-wrapper" style={{marginRight: '3em'}}>
+          <img src ="assets/images/tools/blender.png" />
+          <em>{`${STRINGS.BLENDER}`}</em>
+        </div>
+        <div className="tool-wrapper">
+          <img src ="assets/images/tools/slack.png" />
+          <em>{`${STRINGS.SLACK}`}</em>
+        </div>
+      </div> {/* tools end */}
     </div> {/* main-col end */}
   </div> {/* End skills */}
 </section> /* Resume Section End*/

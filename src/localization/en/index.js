@@ -24,6 +24,8 @@ export default {
   GIT: `Git`,
   DOCKER: `Docker`,
   VISUAL_PARADIGM: `Visual Paradigm`,
+  AZURE: 'Azure',
+  SLACK: 'Slack',
 
   //Introduction
   MY_NAME: 'Shensly Hooplot',
@@ -56,10 +58,11 @@ export default {
 
   //About
   ABOUT_ME_TITLE: 'About me',
-  ABOUT_ME_CONTENT: `I have 8 years of experience in software development, and have worked for startups to medium-sized organizations.
-  While I am proficient as a full-stack engineer, my expertise is in building scalable backend services(API services, async mechanisms).
-  I'm most familiar with C# and the .Net framework, but picking a new framework or language is no problemo.
-  likewise, I love building things from scratch putting in a lot of thought before hand and making proper software designs to address future problems.`,
+  ABOUT_ME_CONTENT: `I have about 8 years of experience in software development, and have worked for startups to medium-sized organizations.
+  I have sufficient experience in all stages of the software development life-cycle, from establisng requirements to designing, building, 
+  testing and deploying software systems. While I am proficient as a full-stack engineer, my expertise is in building scalable backend 
+  services(API services, async mechanisms). I'm most familiar with C# and the .Net framework, but picking a new framework or language is no problem for me.
+  Likewise, I love building things from scratch putting in a lot of thought before hand and making proper software designs to address future problems.`,
 
   CONTACT_DETAILS_TITLE: ``,
 
@@ -96,7 +99,7 @@ export default {
   AUTODEALERS_DESCRIPTION: `The position I held within this company was an intern. Most of my work involved building websites (front-end) with HTML, CSS and Javascript (JQuery). I also had to create my own application for the company which I did with HTML, CSS and C#.net`,
 
   SKILLS_AND_TOOLS: `Skills and Tools`,
-  SKILLS_AND_TOOLS_DESCRIPTION: `Besides programming, I also have experience working with some of the tools listed below. These skills and tools are a reprensation of my versatile skillset that I have been able to establish ever since I got into software engineering.`,
+  SKILLS_AND_TOOLS_DESCRIPTION: `Below you will find some of the tools I use whenever I'm working on a project. This is not the complete ofcourse, but a go-to list for my versatile work environment`,
   
   //Testimonials
   TESTIMONIALS_TITLE: `Testimonials`,
