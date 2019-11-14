@@ -88,7 +88,7 @@ export const Resume = () =>
           <img src ="assets/images/tools/photoshop.png" />
           <em>{`${STRINGS.PHOTOSHOP}`}</em>
         </div>
-        <div className="tool-wrapper" style={{marginRight: '3em', marginLeft: '3em'}}>
+        <div className="tool-wrapper">
           <img src ="assets/images/tools/docker.png" />
           <em>{`${STRINGS.DOCKER}`}</em>
         </div>
@@ -100,7 +100,7 @@ export const Resume = () =>
           <img src ="assets/images/tools/azure.png" />
           <em>{`${STRINGS.AZURE}`}</em>
         </div>
-        <div className="tool-wrapper" style={{marginRight: '3em'}}>
+        <div className="tool-wrapper">
           <img src ="assets/images/tools/blender.png" />
           <em>{`${STRINGS.BLENDER}`}</em>
         </div>

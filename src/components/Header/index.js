@@ -7,7 +7,7 @@ export const Header = () =>
     <nav id="nav-wrap">
 
       <a className="mobile-btn" href="#nav-wrap" title="Show navigation">{STRINGS.MOBILE_SHOW_NAVIGATION}</a>
-      <a className="mobile-btn" href="#" title="Hide navigation">{STRINGS.MOBILE_HIDE_NAVIGATION}</a>
+      <a className="mobile-btn" href="#no-nav-wrap" title="Hide navigation">{STRINGS.MOBILE_HIDE_NAVIGATION}</a>
 
       <ul id="nav" className="nav">
         <li className="current"><a className="smoothscroll" href="#home">{STRINGS.MENU_HOME}</a></li>
