@@ -28,7 +28,7 @@ export const repos = octokitRequest('POST /graphql', {
 	`,
 })
 
-export const sendMail = (body) => fetch(`${config.API_HOST}:${config.API_PORT}/api/mail/send`, {
+export const sendMail = (body) => fetch(`${config.API_HOST}/api/mail/send`, {
   credentials: 'same-origin',
   mode: 'no-cors',
   method: 'POST',
