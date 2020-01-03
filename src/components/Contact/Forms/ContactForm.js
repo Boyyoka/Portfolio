@@ -147,7 +147,7 @@ export default class ContactForm extends Component {
             <div className="errors">{errors.message}</div>
           </div>
           <div style={{ display: 'flex' }}>
-            <input type="submit" className="submit" value={STRINGS.CONTACT_SUBMIT} />
+            <input type="submit" className="submit" value={STRINGS.CONTACT_SUBMIT} disabled={isSubmitting}/>
             {isSubmitting && <Loader />}
           </div>
         </fieldset>
